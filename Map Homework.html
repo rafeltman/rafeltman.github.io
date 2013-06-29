@@ -1,0 +1,52 @@
+<h1>U.S. Cheese Production By State</h1>
+<div><!DOCTYPE html>
+<html>
+<head>
+<title>Merge of September 2011 Cheese Production and US Regions State Boundaries - Google Fusion Tables</title>
+<style type="text/css">
+html, body, #googft-mapCanvas {
+height: 450px;
+margin: 0;
+padding: 0;
+width: 750px;
+}
+</style>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+function initialize() {
+var map = new google.maps.Map(document.getElementById('googft-mapCanvas'), {
+center: new google.maps.LatLng(38.85940575089628, -95.92593937499993),
+zoom: 4,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
+
+layer = new google.maps.FusionTablesLayer({
+map: map,
+heatmap: { enabled: false },
+query: {
+select: "col2\x3e\x3e1",
+from: "1IxZpywJ6G5kGLrne0iOvvY6t_4chX6LUPSX8Jts",
+where: ""
+},
+options: {
+styleId: 2,
+templateId: 2
+}
+});
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="googft-mapCanvas"></div>
+</body>
+</html>
+</div>
+<br>
+<p>Where's your cheese coming from? Almost definitely Wisconsin or California. But it might surprise you to find that New York and New Mexico are also big players. And despite their cheddery fame, Vermont only produced a paltry 10,412,000 pounds of cheese in September of 2011. Guess those artisanal curds are something special.</p>
+<p>Data via <a href="http://www.bloomberg.com/news/2011-11-01/u-s-september-cheese-production-by-state-and-region-table-.html">Bloomberg</a></p>
